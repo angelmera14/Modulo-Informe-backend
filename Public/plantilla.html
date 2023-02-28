@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title></title>
+</head>
+
+<body>
+    <table class=" table ">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Empresa</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Contacto</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Requerimiento</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Solucion</th>
+                <th scope="col">Operador</th>
+            </tr>
+        </thead>
+        <tbody id='este'>
+           
+        </tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script>
+        let i = document.getElementById('este')
+        const json = [
+            {
+                "idticket": 2,
+                "nombre_empresa": "LA DIFERENCIA",
+                "creado": "2021-06-02",
+                "nombre_contacto": "Salvador Rangel",
+                "descripcion": "ELIMINE UN PAGO A PROVEEDOR PERO NO ME REVERSO LA DEUDA SIGUE SALIDENDO COMO QUE ESTA PAGADO Nº 150",
+                "tipo": "Soporte",
+                "solucion": "ya se soluciono",
+                "nombre": "WALTER CEDEÑO",
+                "Estado": "Solucionado"
+            },
+            {
+                "idticket": 12,
+                "nombre_empresa": "LA DIFERENCIA",
+                "creado": "2021-06-07",
+                "nombre_contacto": "Andres Andrade",
+                "descripcion": "4587574 swdfsde   f gft tt ttt t t",
+                "tipo": "ERROR",
+                "solucion": "ya se soluciono",
+                "nombre": "WALTER CEDEÑO",
+                "Estado": "Solucionado"
+            },
+            {
+                "idticket": 19,
+                "nombre_empresa": "LA DIFERENCIA",
+                "creado": "2021-06-08",
+                "nombre_contacto": "Andres Andrade",
+                "descripcion": "Desarrolo de opcion",
+                "tipo": "Desarrollo",
+                "solucion": "ya se soluciono",
+                "nombre": "WALTER CEDEÑO",
+                "Estado": "Solucionado"
+            },
+            {
+                "idticket": 36,
+                "nombre_empresa": "LA DIFERENCIA",
+                "creado": "2021-11-11",
+                "nombre_contacto": "Salvador Rangel",
+                "descripcion": "esto es una prueba",
+                "tipo": "aaaa",
+                "solucion": null,
+                "nombre": "WALTER CEDEÑO",
+                "Estado": "Solucionado"
+            },
+            {
+                "idticket": 37,
+                "nombre_empresa": "LA DIFERENCIA",
+                "creado": "2021-11-11",
+                "nombre_contacto": "Salvador Rangel",
+                "descripcion": "pruebaaaaaaaaaaaaaaa",
+                "tipo": "Soporte",
+                "solucion": null,
+                "nombre": "WALTER CEDEÑO",
+                "Estado": "Solucionado"
+            },
+            {
+                "idticket": 43,
+                "nombre_empresa": "LA DIFERENCIA",
+                "creado": "2021-11-15",
+                "nombre_contacto": "Salvador Rangel",
+                "descripcion": "esto es una prueba\n",
+                "tipo": "prueba",
+                "solucion": "aaaaaa",
+                "nombre": "WALTER CEDEÑO",
+                "Estado": "Solucionado"
+            },
+            {
+                "idticket": 46,
+                "nombre_empresa": "LA DIFERENCIA",
+                "creado": "2021-11-15",
+                "nombre_contacto": "Salvador Rangel",
+                "descripcion": "000000",
+                "tipo": "Soporte",
+                "solucion": "ya se soluciono",
+                "nombre": "WALTER CEDEÑO",
+                "Estado": "Solucionado"
+            }
+        ]
+        json.forEach(datatiporequerimiento => {
+            i.innerHTML += 
+            <tr> 
+                <td>${datatiporequerimiento.idticket}</td>
+                <td>${datatiporequerimiento.nombre_empresa}</td>
+                <td>${datatiporequerimiento.creado}</td>
+                <td>${datatiporequerimiento.nombre_contacto}</td>
+                <td>${datatiporequerimiento.tipo}</td>
+                <td>${datatiporequerimiento.descripcion}</td>
+                <td>${datatiporequerimiento.Estado}</td>
+                <td>${datatiporequerimiento.solucion}</td>
+                <td>${datatiporequerimiento.nombre}</td>
+            </tr>
+            
+        });
+    </script>
+</body>
+
+</html>

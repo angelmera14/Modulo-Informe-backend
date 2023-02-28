@@ -1,0 +1,3 @@
+{
+    "consultaTicketPendientes":"SELECT ti.idticket,e.nombre_empresa,tp.tipo,co.nombre_contacto,ti.descripcion,ti.estado, ti.creado  FROM ticket ti INNER JOIN contacto co ON ti.contacto=co.idcontacto INNER JOIN empresa e ON ti.idempresa=e.idempresa INNER JOIN tipo_ticket tp ON ti.tipo=tp.idtipo_ticket"
+}
