@@ -1,13 +1,13 @@
 {
-  "name": "biroservi",
+  "name": "softgreen",
   "version": "1.0.0",
-  "description": "endpoint para proyecto adm web",
+  "description": "endpoint para proyecto titulacion",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon Src/index.js"
   },
-  "author": "walter cedeño",
+  "author": "Angel Mera, Debbie Engracia",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
