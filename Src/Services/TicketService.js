@@ -306,7 +306,7 @@ class TicketServices {
         auth: {
           user: "softgreens.a.14@gmail.com",
           //process.env.CORREOEMISOR, // generated ethereal user
-          pass: "jwnosycparyojoaa", //process.env.PASSOWORDEMISOR, // generated ethereal password
+          pass: "qzhkhrdsdkbnacnb", //process.env.PASSOWORDEMISOR, // generated ethereal password
         },
       });
       let info = await transporter.sendMail({
@@ -382,6 +382,40 @@ class TicketServices {
       return { status: false, data: [], error: error.message };
     }
   }
+  async obtenerDatosInicio() {
+    try {
+      const totales = await db.query('CALL SP_TOTALES_DASHBOARD()', {
+        // type: Sequelize.QueryTypes.SELECT
+      });
+      const soporte_operador = await db.query('CALL SP_SOPORTES_REALIZADOS()', {
+        // type: Sequelize.QueryTypes.SELECT
+      });
+      const soporte_tipo_soporte = await db.query('CALL SP_TIPO_SOPORTE_REALIZADOS()', {
+        // type: Sequelize.QueryTypes.SELECT
+      });
+      const datos_inicio = {
+        ...totales["0"],
+        soporte_operador,
+        soporte_tipo_soporte
+      }
+      return { status: true, data: datos_inicio };
+    } catch (error) {
+      return { status: false, data: [], error: error.message };
+    }
+  }
+  // DASHBOARD
+  // async obtenerDatosInicio() {
+  //   try {
+  //     const estadisticas = await db.query("CALL SP_CONSULTATICKET(:OP)", {
+  //       replacements: {
+  //         OP: 1,
+  //       },
+  //     });
+  //     return { status: true, data: buscarTickets };
+  //   } catch (error) {
+  //     return { status: false, data: [], error: error.message };
+  //   }
+  // }
 }
 var readHTMLFile = function (path, callback) {
   fs.readFile(path, { encoding: "utf-8" }, function (err, html) {

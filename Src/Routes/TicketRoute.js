@@ -12,4 +12,5 @@ ticketRouter.get("/listicketxid/:idticket", ticketController.listarticketxidCont
 ticketRouter.get("/listarticketodos", ticketController.consultaticketodocontroller);
 ticketRouter.post("/enviacorreo", ticketController.enviacorreoController);
 ticketRouter.post("/actualizartipoticket", ticketController.actualizartipoticket);
+ticketRouter.get("/obtenerdatosinicio", ticketController.obtenerDatosInicioAsync);
 module.exports = ticketRouter;
